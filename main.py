@@ -21,7 +21,7 @@ def hello_world(filename):
         6: '[',
         7: ']'
     }
-    brainfucked_data = [brainfuck[val % 8] for val in greyscale_data]
+    brainfucked_data = [brainfuck[val // (gray_pineapple.height//6)] for val in greyscale_data]
     html_string = html_from_brainfucked_data(brainfucked_data, img.size)
 
     return f"""

@@ -28,8 +28,7 @@ brainfuck = {
     7: ']'
 }
 
-brainfucked_data = [brainfuck[val % 8] for val in greyscale_data]
-
+brainfucked_data = [brainfuck[val // (gray_pineapple.height//6)] for val in greyscale_data]
 
 def html_from_brainfucked_data(data, size):
     w = size[0]
