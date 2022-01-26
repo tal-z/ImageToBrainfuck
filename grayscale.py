@@ -1,8 +1,9 @@
 from PIL import Image
 
+
 def get_pillow_img(name):
-    pineapple = Image.open(name)
-    return pineapple
+    img = Image.open(name)
+    return img
 
 
 def img2greyscale(img):
@@ -37,7 +38,7 @@ def html_from_brainfucked_data(data, size):
     start, end = 0, w
     for row in range(h):
         string = string + "<br>"
-        string += ''.join([str(item) for item in data[start:end]])
+        string += ''.join([str(item)+str(item) for item in data[start:end]])
         start += w
         end += w
 

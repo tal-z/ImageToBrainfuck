@@ -7,6 +7,7 @@ app = Flask(__name__)
 
 @app.route("/<filename>")
 def hello_world(filename):
+    print(filename)
     img = get_pillow_img(filename)
     img = img2greyscale(img)
     greyscale_data = list(img.getdata())
